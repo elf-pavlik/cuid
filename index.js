@@ -10,9 +10,9 @@
  * MIT License
  */
 
-var fingerprint = require('./lib/fingerprint.js');
-var pad = require('./lib/pad.js');
-var getRandomValue = require('./lib/getRandomValue.js');
+import fingerprint from './lib/fingerprint.browser.js';
+import pad from './lib/pad.js';
+import getRandomValue from './lib/getRandomValue.browser.js';
 
 var c = 0,
   blockSize = 4,
@@ -81,4 +81,4 @@ cuid.isSlug = function isSlug (stringToCheck) {
 
 cuid.fingerprint = fingerprint;
 
-module.exports = cuid;
+export default cuid;
