@@ -42,13 +42,10 @@
     "watchify": "3.11.0"
   },
   "scripts": {
-    "build": "mkdirp dist && browserify index.js -s cuid -o dist/cuid.js && uglifyjs dist/cuid.js -c -m -o dist/cuid.min.js",
     "lint": "eslint index.js lib test",
     "test": "npm run lint && npm run test:server && npm run test:browser",
     "test:browser": "testcafe chrome ./test/browser.js",
-    "test:server": "tape -r babel-register -r babel-polyfill test/server.js",
-    "prepare": "npm run build",
-    "update": "updtr"
+    "test:server": "tape -r babel-register -r babel-polyfill test/server.js"
   },
   "dependencies": {}
 }
